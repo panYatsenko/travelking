@@ -1,0 +1,296 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
+
+/* Reset some default browser styles */
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+/* Basic body styles */
+body {
+  margin: 0;
+  font-family: "Poppins", Helvetica, Arial, sans-serif;
+  line-height: 1.6;
+  color: #333;
+}
+
+h1,
+h2,
+ul,
+p {
+  margin: 0;
+}
+
+ul {
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Container class for layout */
+.container {
+  max-width: 968px;
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+}
+
+.header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+}
+
+.nav {
+  max-width: 968px;
+  height: 3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@media screen and (max-width: 768px) {
+  .nav__menu {
+    position: fixed;
+    top: -100%;
+    left: 0;
+    right: 0;
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 1.5rem;
+    background-color: #ecf3f2;
+    border-radius: 1rem;
+    transition: 0.4s;
+  }
+}
+
+.nav__logo,
+.nav__toggle {
+  color: #ecf3f2;
+}
+
+.nav__link {
+  color: #11443f;
+  font-weight: 500;
+}
+
+.nav__item {
+  margin-bottom: 1.5rem;
+}
+
+.nav__toggle {
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.show-menu {
+  top: 4rem;
+}
+
+.hero {
+  height: 100vh;
+  position: relative;
+}
+
+.hero__background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+  object-position: center;
+}
+
+.hero__container {
+  position: relative;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 2fr 0.25fr;
+  align-content: center;
+}
+
+.hero__title,
+.hero__subtitle,
+.hero__description {
+  color: #ecf3f2;
+}
+
+.hero__subtitle {
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.hero__title {
+  font-size: 3rem;
+}
+
+.hero__description {
+  margin-bottom: 1.4rem;
+}
+
+.btn {
+  align-items: center;
+  padding: 1rem 1.5rem;
+  border: 0;
+  border-radius: 0.5rem;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.btn-group {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.hero-btn {
+  display: inline-flex;
+  background-color: #ecf3f2;
+  color: #26a69a;
+}
+
+.hero-btn:hover {
+  background-color: #f5fffe;
+}
+
+.btn-select:hover {
+  background-color: #fff;
+  color: #26a69a;
+}
+
+.btn-clear:hover {
+  background-color: #fff;
+  color: red;
+}
+
+.popup {
+  position: absolute;
+  max-width: 320px;
+  width: 100%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #ecf3f2;
+  padding: 1.3rem 0.75rem;
+  border-radius: 0.5rem;
+}
+
+.popup__close {
+  position: absolute;
+  top: -0.75rem;
+  right: -0.75rem;
+  display: inline-flex;
+  padding: 0.35rem;
+  background-color: #26a69a;
+  color: #ecf3f2;
+  font-size: 1.2rem;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.popup input {
+  margin-bottom: 10px;
+  padding: 10px;
+  width: 100%;
+  font-family: "Poppins", Helvetica, Arial, sans-serif;
+  border: none;
+}
+
+#room-container {
+  margin: 10px 0;
+}
+
+.room {
+  border-bottom: 1px solid #e9e9ed;
+}
+
+.room h2 {
+  font-size: 1.4rem;
+}
+
+.flatpickr-day {
+  border-radius: 0 !important;
+}
+
+.flatpickr-day .price {
+  display: block;
+  margin-top: 14px;
+  font-size: 0.6em;
+  color: #333;
+  position: relative;
+  z-index: 1;
+  pointer-events: none;
+}
+
+@media screen and (max-width: 320px) {
+  .container {
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .nav {
+    height: 4.5rem;
+  }
+
+  .nav__list {
+    display: flex;
+  }
+
+  .nav__item {
+    margin-right: 2rem;
+    margin-bottom: 0;
+  }
+
+  .nav__link {
+    color: #ecf3f2;
+  }
+
+  .nav__toggle {
+    display: none;
+  }
+
+  .hero__container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .hero__description {
+    padding-right: 5rem;
+    margin-bottom: 2rem;
+  }
+
+  @media screen and (min-width: 1024px) {
+    .container {
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .hero__description {
+      padding-right: 10rem;
+    }
+  }
+}

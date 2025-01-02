@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Travelking Challenge</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css"
+    />
+    <link rel="stylesheet" href="assets/css/styles.css" />
+  </head>
+  <body>
+    <header class="header">
+      <nav class="nav container">
+        <a href="#" class="nav__logo">Travelking</a>
+
+        <div class="nav__menu" id="nav-menu">
+          <ul class="nav__list">
+            <li class="nav__item"><a href="#" class="nav__link">Home</a></li>
+            <li class="nav__item"><a href="#" class="nav__link">Explore</a></li>
+            <li class="nav__item">
+              <a href="#" class="nav__link">Destinations</a>
+            </li>
+            <li class="nav__item"><a href="#" class="nav__link">Hotels</a></li>
+          </ul>
+        </div>
+
+        <div class="nav__toggle" id="nav-toggle">
+          <i class="bx bx-menu"></i>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <div class="hero">
+        <img src="assets/images/borabora.jpg" alt="" class="hero__background" />
+        <div class="hero__container container">
+          <div class="hero__data">
+            <h1 class="hero__title">Travelking</h1>
+            <h2 class="hero__subtitle">Rooms Aviability Checker</h2>
+            <p class="hero__description">
+              Please choose dates for your vacaction
+            </p>
+            <button class="btn hero-btn" id="chooseBtn">
+              Chose dates <i class="bx bx-right-arrow-alt"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="popup hidden" id="popup">
+        <div class="popup__close" id="popup-close">
+          <i class="bx bx-x"></i>
+        </div>
+        <input class="date" type="text" placeholder="Chose your dates" />
+        <div class="btn-group">
+          <button class="btn btn-select">Select</button>
+          <button class="btn btn-clear">Clear</button>
+        </div>
+        <div id="roomContainer"></div>
+      </div>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>
